@@ -4,10 +4,10 @@ import { events } from './data/events.js';
 import { finalQuestion } from './data/records.js';
 import { titles, nextTasks, missedText } from './data/titles.js';
 
-export const GAME_END = 50 * 60;     // 게임 초
-export const TICK_GAME_SEC = 12;     // 실제 1초 = 게임 12초
-export const MISS_AFTER = 6 * 60;    // 방치 6분 → ⌛ 놓침
-export const LOOK_COOLDOWN = 5 * 60; // 둘러보기 쿨다운 게임 5분
+export const GAME_END = 40 * 60;     // 게임 초 (초등 수업 40분)
+export const TICK_GAME_SEC = 20;     // 실제 1초 = 게임 20초 (40분 = 실제 2분)
+export const MISS_AFTER = 5 * 60;    // 방치 5분(실제 15초) → ⌛ 놓침
+export const LOOK_COOLDOWN = 4 * 60; // 둘러보기 쿨다운 게임 4분
 
 function freshState() {
   return {

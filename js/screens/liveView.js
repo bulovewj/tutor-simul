@@ -1,7 +1,7 @@
 // 수업 중 화면 그리기 (상태는 읽기만)
 import { el } from '../dom.js';
 import { liveText, choiceText } from '../data/ui.js';
-import { state, eventById, seatsOf, lookRemaining, totalScore } from '../state.js';
+import { state, eventById, seatsOf, lookRemaining, totalScore, GAME_END } from '../state.js';
 
 const ICON = { ok: '🙂', hand: '🙋', alert: '⚠️', quiet: '😶', missed: '⌛' };
 const LABEL = liveText.seatLabels;
@@ -52,7 +52,7 @@ export function seatStatus(n, revealing) {
 
 export function renderLiveView(r, revealing) {
   const live = state.live;
-  r.clock.textContent = `⏱ ${mmss(live.clock)} / 50:00`;
+  r.clock.textContent = `⏱ ${mmss(live.clock)} / ${mmss(GAME_END)}`;
   r.score.textContent = `⭐ ${totalScore()}${liveText.scoreUnit}`;
   const min = live.clock / 60;
   let cur = 0;

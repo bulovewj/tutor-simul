@@ -15,20 +15,6 @@ export const records = [
       { text: '충전함에 그냥 넣어 둔다', score: 0, feedback: '다음 수업에 이 기기를 받은 학생이 또 멈춰요.' },
       { text: '직접 열어서 고쳐 본다', score: -5, feedback: '학교 기기를 임의로 분해하면 수리·보증이 어려워져요.' },
     ] },
-  { id: 'rec_account', title: '민준 계정', category: '계정 · 연계', text: '민준이 계정 로그인이 계속 안 돼요.',
-    choices: [
-      { text: '담당 선생님께 연락해 비밀번호 재설정을 요청하고, 학생 본인이 새 비밀번호를 설정하게 한다', score: 10, feedback: '계정은 담당 절차로, 비밀번호는 학생 본인이.' },
-      { text: '그냥 둔다', score: 0, feedback: '기다리면 다음 수업 도입이 또 멈춰요.' },
-      { text: '친구 계정으로 쓰게 한다', score: -5, feedback: '다른 학생 계정을 쓰면 활동 기록과 개인정보가 섞여요.' },
-      { text: '내가 새 비밀번호를 정해 메모해 둔다', score: -5, feedback: '보안 수칙 위반. 튜터는 학생 비밀번호를 정하거나 보관하지 않아요.' },
-    ] },
-  { id: 'rec_wifi', title: '교실 Wi-Fi', category: '네트워크 · 연계', text: '활동2에 3명이 동시에 Wi-Fi가 끊겼어요.',
-    choices: [
-      { text: '시간·위치·영향 학생 수를 기록해 담당자를 거쳐 테크센터에 연계한다', score: 10, feedback: '연계할 때 남길 5가지. 기록이 있어야 원인을 찾아요.' },
-      { text: '담당 선생님께 "Wi-Fi가 좀 끊겼어요"라고 말로만 전한다', score: 5, feedback: '연결은 했지만 언제·어디서·몇 명인지 빠졌어요.' },
-      { text: '공유기를 껐다 켜 보고 끝낸다', score: 0, feedback: '원인은 남은 채 다음 수업으로 넘어가요.' },
-      { text: '학생 기기 탓으로 정리한다', score: -5, feedback: '3명 동시 끊김은 기기보다 네트워크 신호예요.' },
-    ] },
   { id: 'rec_charger', title: '15번 충전', category: '기기 · 물품', text: '15번 기기가 충전함에서 충전이 안 돼요.',
     choices: [
       { text: '충전함 칸 번호를 확인해 정보 담당 선생님께 전달하고 행정실(수리·물품)로 연결한다', score: 10, feedback: '물품·수리는 행정실로. 칸 번호까지 남겨 정확히 연결했어요.' },
@@ -59,8 +45,6 @@ export const finalQuestion = {
   text: '다음 수업 전에 꼭 점검할 것 1개는?',
   matchPool: [
     { record: 'rec_device12', text: '12번 태블릿 수리 접수가 됐는지 확인한다' },
-    { record: 'rec_account', text: '민준이 계정 재설정이 끝났는지 확인한다' },
-    { record: 'rec_wifi', text: '교실 Wi-Fi 동시 접속을 다시 테스트한다' },
     { record: 'rec_charger', text: '충전함 15번 칸 수리 여부를 확인한다' },
     { record: 'rec_student', text: '18번 학생 자리·지원 방법을 담임 선생님과 확인한다' },
     { record: 'rec_privacy', text: '전자칠판에 띄울 화면을 선생님과 미리 확인한다' },
