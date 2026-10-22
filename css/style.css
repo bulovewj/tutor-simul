@@ -45,20 +45,44 @@ button:disabled { cursor: default; }
 @keyframes pop { from { opacity: 0; transform: translate(-50%, 8px); } }
 
 /* ---------- 시작 ---------- */
-.start { min-height: 100dvh; justify-content: center; }
-.start-hero { text-align: center; display: grid; gap: var(--gap-s); }
-.start-clock { font-size: var(--fs-hero); }
 .title { font-size: var(--fs-xxl); }
 .subtitle { color: var(--gray); }
-.scenario { display: grid; gap: var(--gap-s); font-size: var(--fs-s); }
-.row { display: flex; gap: var(--gap-s); align-items: flex-start; }
-.row-icon { flex: none; width: 22px; text-align: center; }
 .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--gap-s); font-size: var(--fs-s); }
 .step { display: flex; gap: var(--gap-s); align-items: center; padding: var(--gap-s) var(--gap-m); border-radius: var(--radius-sm); border-left: 4px solid; }
 .step-prep { background: var(--blue-soft); border-color: var(--blue); }
 .step-live { background: var(--teal-soft); border-color: var(--teal); }
 .step-post { background: var(--amber-soft); border-color: var(--amber); }
 .step-icon { font-size: var(--fs-l); }
+
+/* ---------- 타이틀 ---------- */
+.title-screen { min-height: 100dvh; justify-content: center; align-items: center; text-align: center; gap: var(--gap-l); background: linear-gradient(180deg, var(--blue-soft), var(--bg) 60%); }
+.title-badge { font-size: var(--fs-xs); font-weight: 800; color: var(--white); background: var(--teal); padding: 2px var(--gap-m); border-radius: var(--radius-pill); }
+.title-logo { display: grid; gap: var(--gap-s); }
+.title-clock { font-size: 56px; animation: tick 1s steps(2) infinite; }
+@keyframes tick { 50% { transform: rotate(8deg); } }
+.title-screen .title { font-size: 36px; }
+.title-class { width: 100%; max-width: 280px; display: grid; gap: var(--gap-s); padding: var(--gap-m); background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.title-board { height: 18px; border-radius: 4px; background: #1E4E5C; border: 2px solid var(--navy); }
+.title-seats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; font-size: var(--fs-l); }
+.title-time { font-size: var(--fs-s); color: var(--gray); font-weight: 700; }
+.btn-start { font-size: var(--fs-xl); min-height: 56px; }
+
+/* ---------- 오늘의 수업 ---------- */
+.lesson-head { display: grid; gap: var(--gap-xs); padding: var(--gap-m) var(--gap-l); border-radius: var(--radius); background: var(--navy); color: var(--white); }
+.lesson-head h2 { color: var(--white); font-size: var(--fs-xl); }
+.lesson-label { font-size: var(--fs-xs); opacity: .75; }
+.lesson-tags { display: flex; gap: var(--gap-xs); flex-wrap: wrap; }
+.tag { font-size: var(--fs-xs); padding: 2px var(--gap-s); border-radius: var(--radius-pill); background: rgba(255, 255, 255, .15); }
+.flow { display: grid; gap: var(--gap-s); padding: var(--gap-m) var(--gap-l); }
+.flow-list { list-style: none; margin: 0; padding: 0; display: grid; }
+.flow-item { position: relative; display: flex; gap: var(--gap-m); align-items: center; padding: 6px 0; }
+.flow-item:not(:last-child)::after { content: ''; position: absolute; left: 17px; top: 42px; bottom: -6px; width: 2px; background: var(--line); }
+.flow-icon { flex: none; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; background: var(--teal-soft); font-size: var(--fs-l); z-index: 1; }
+.flow-body { display: grid; line-height: 1.3; }
+.flow-name { font-size: var(--fs-xs); font-weight: 800; color: var(--teal); }
+.flow-desc { font-size: var(--fs-s); font-weight: 700; }
+.game-title { font-size: var(--fs-s); color: var(--gray); }
+.start .steps .step { padding: 6px var(--gap-m); }
 
 /* ---------- 단계 머리 ---------- */
 .phase-head { display: flex; justify-content: space-between; align-items: center; gap: var(--gap-s); padding: var(--gap-m) var(--gap-l); border-radius: var(--radius); }

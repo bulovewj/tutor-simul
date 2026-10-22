@@ -3,7 +3,7 @@ import { el, signed, badgeClass } from '../dom.js';
 import { choiceText } from '../data/ui.js';
 import { shuffle } from '../state.js';
 
-const LIMIT_MS = 15000;
+const LIMIT_MS = 20000;
 const NUMS = ['①', '②', '③', '④'];
 
 // opts: { seatLabel, category, text, choices, phase, onPick(choice|null), onClose() }

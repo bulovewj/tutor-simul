@@ -61,7 +61,8 @@ export function renderLiveView(r, revealing) {
     c.classList.toggle('is-now', i === cur);
     c.classList.toggle('is-past', i < cur);
   });
-  r.boardText.textContent = liveText.phases[cur].board;
+  const ph = liveText.phases[cur];
+  r.boardText.textContent = `${ph.icon} ${ph.name}: ${ph.desc}`;
   for (let n = 1; n <= 24; n++) {
     const s = seatStatus(n, revealing);
     const b = r.seats[n];
