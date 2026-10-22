@@ -12,7 +12,7 @@ export const nextTasks = {
   post: '누구에게 연결해야 하는지 다시 보세요. 기록하지 않은 문제는 다음 수업에 다시 생깁니다.',
 };
 
-export const resultLabels = { total: '총점', nextTask: '다음 판 과제', code: '결과 코드', unit: '명' };
+export const resultLabels = { total: '총점', nextTask: '다음 판 과제', code: '결과 코드', codeHint: '수업 전%-수업 중%-수업 후%-칭호 · 패들렛에 올려 공유해요', unit: '명' };
 
 export const phaseNames = { prep: '수업 전', live: '수업 중', post: '수업 후' };
 

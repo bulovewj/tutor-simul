@@ -27,7 +27,7 @@ export function renderResult(root, go) {
     el('div', { class: `card next-task bar-${task.phase}` },
       el('b', {}, `🎯 ${L.nextTask} · ${phaseNames[task.phase]}`), el('p', {}, task.text)),
     el('p', { class: 'missed-line' }, missedLine),
-    el('div', { class: 'code-box' }, el('span', { class: 'code-label' }, L.code), el('b', { class: 'code' }, resultCode())),
+    el('div', { class: 'code-box' }, el('span', { class: 'code-label' }, L.code), el('b', { class: 'code' }, resultCode()), el('span', { class: 'code-hint' }, L.codeHint)),
     el('button', { class: 'btn btn-primary btn-block', onclick: () => go('start') }, '다시 하기')));
   console.log('[result]', JSON.parse(JSON.stringify(state)));
 }
