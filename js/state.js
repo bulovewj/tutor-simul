@@ -6,7 +6,7 @@ import { titles, nextTasks, missedText } from './data/titles.js';
 
 export const GAME_END = 50 * 60;     // 게임 초
 export const TICK_GAME_SEC = 12;     // 실제 1초 = 게임 12초
-export const MISS_AFTER = 6 * 60;    // 방치 6분 → 💤
+export const MISS_AFTER = 6 * 60;    // 방치 6분 → ⌛ 놓침
 export const LOOK_COOLDOWN = 5 * 60; // 둘러보기 쿨다운 게임 5분
 
 function freshState() {

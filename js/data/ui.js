@@ -23,7 +23,7 @@ export const howtoText = {
   ],
   tips: [
     ['😶', '조용한 학생은 👀 둘러보기를 눌러야 3초 동안 보여요.'],
-    ['💤', '6분 동안 그냥 두면 놓친 학생이 돼요.'],
+    ['⌛', '6분 동안 그냥 두면 놓친 학생(⌛ 놓침)이 돼요.'],
     ['📝', '기록을 남긴 문제만 수업 후에 조치할 수 있어요.'],
   ],
   scoreTitle: '점수',
@@ -41,7 +41,8 @@ export const liveText = {
   boardLabel: '선생님 · 전자칠판',
   classEnd: '수업 종료',
   lookHint: '😶 숨은 신호를 찾아 눌러 보세요',
-  missedToast: '💤 방치한 학생이 생겼어요 (−5)',
+  missedToast: '⌛ 놓친 학생이 생겼어요 (−5)',
+  missedTag: '놓침',
   logEmpty: '아직 기록이 없어요.',
   logTitle: '📝 기록장',
   seatLabels: { ok: '정상 참여', hand: '도움 요청', alert: '기기·접속·보안 문제', quiet: '조용한 이탈', missed: '놓친 학생' },

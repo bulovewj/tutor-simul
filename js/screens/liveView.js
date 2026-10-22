@@ -3,7 +3,7 @@ import { el } from '../dom.js';
 import { liveText, choiceText } from '../data/ui.js';
 import { state, eventById, seatsOf, lookRemaining, totalScore } from '../state.js';
 
-const ICON = { ok: '🙂', hand: '🙋', alert: '⚠️', quiet: '😶', missed: '💤' };
+const ICON = { ok: '🙂', hand: '🙋', alert: '⚠️', quiet: '😶', missed: '⌛' };
 const LABEL = liveText.seatLabels;
 
 const mmss = (sec) => `${String(Math.floor(sec / 60)).padStart(2, '0')}:${String(sec % 60).padStart(2, '0')}`;
@@ -21,7 +21,7 @@ export function buildLive(handlers) {
   const grid = el('div', { class: 'seat-grid' });
   for (let n = 1; n <= 24; n++) {
     r.seats[n] = el('button', { class: 'seat', onclick: () => handlers.onSeat(n) },
-      el('span', { class: 'seat-icon' }), el('span', { class: 'seat-no' }, n));
+      el('span', { class: 'seat-icon' }), el('span', { class: 'seat-no' }, n), el('span', { class: 'seat-tag' }));
     grid.append(r.seats[n]);
   }
   r.look = el('button', { class: 'btn btn-look', onclick: handlers.onLook });
@@ -68,6 +68,7 @@ export function renderLiveView(r, revealing) {
     const b = r.seats[n];
     b.dataset.kind = s.kind;
     b.querySelector('.seat-icon').textContent = ICON[s.kind];
+    b.querySelector('.seat-tag').textContent = s.kind === 'missed' ? liveText.missedTag : '';
     b.setAttribute('aria-label', `${n}${choiceText.seatSuffix} ${LABEL[s.kind]}`);
     b.disabled = s.kind === 'missed';
   }

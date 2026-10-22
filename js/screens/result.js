@@ -15,7 +15,7 @@ export function renderResult(root, go) {
       el('span', { class: 'bar-pct' }, `${pct}%`));
   });
   const missedLine = missed.total
-    ? `💤 ${missed.total}${L.unit} — ${missed.items.map(([label, n]) => `${label} ${n}${L.unit}`).join(', ')}`
+    ? `⌛ ${missed.total}${L.unit} — ${missed.items.map(([label, n]) => `${label} ${n}${L.unit}`).join(', ')}`
     : `🙂 ${missedText.none}`;
 
   root.append(el('section', { class: 'screen result' },

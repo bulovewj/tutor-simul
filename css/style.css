@@ -126,7 +126,8 @@ button:disabled { cursor: default; }
 .seat[data-kind="hand"] { background: var(--amber-soft); border-color: var(--amber); animation: pulse 1s infinite; }
 .seat[data-kind="alert"] { background: var(--red-soft); border-color: var(--red); animation: pulse 1s infinite; }
 .seat[data-kind="quiet"] { background: var(--teal-soft); border-color: var(--teal); border-style: dashed; animation: pulse .6s infinite; }
-.seat[data-kind="missed"] { background: var(--gray-soft); opacity: .7; }
+.seat[data-kind="missed"] { background: var(--gray-soft); border-style: dashed; color: var(--gray); }
+.seat[data-kind="missed"] .seat-icon { font-size: var(--fs-m); margin-top: -10px; } .seat-tag { position: absolute; bottom: 2px; font-size: 10px; font-weight: 800; color: var(--gray); }
 @keyframes pulse { 50% { transform: scale(1.06); } }
 .look-hint { min-height: 20px; text-align: center; font-size: var(--fs-s); color: var(--teal); font-weight: 700; }
 .live-foot { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap-s); }
